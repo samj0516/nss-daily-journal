@@ -7,9 +7,55 @@
     </head>
 
     <body>
-        <main id="container">
+        <header>
+            <img src="" alt="logo">
+            <h1>Samantha<br />
+                Jo<br />
+                Campbell
+            </h1>
+            <h2>My Journey Into Web Development</h2>
+        </header>
+        <main class="journalBody">
+            <h2>Daily Journal</h2>
+            <form action ="">
+                <fieldset>
+                    <label for="journalDate">Date</label>
+                    <input type="date" name="date" id="date">
+                </fieldset>
+                <fieldset>   
+                    <label for="conceptsCovered">Concepts Covered</label>
+                    <input type="text" name="conceptsCovered" id="conceptsCovered">
+                </fieldset> 
+                <fieldset>   
+                    <label for="mood">Mood</label>
+                    <input type="" name="mood" id="mood">
+                </fieldset> 
+                <fieldset>
+                    <label for="entry">Entry</label>
+                    <textarea name="entry" id="entry"></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="button" value="Record Journal Entry" onclick="record()">
+                </fieldset>
+            </form>
+            <section class="journalEntries">
+                <article class="journalEntry">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </article>
+            </section>
 
         </main>
+        <section class="sideBar">
+            <button>+ Journal Entry</button>
+            <ul>
+                <li>Journal Entry</li>
+            </ul>
+        </section>
+        <footer>
+            <p>Copyright 2021</p>
+            <a href="github.com/samj0516/">Check out my github!</a>
+        </footer>
 
         <script type="module" src="./scripts/main.js"></script>
     </body>
