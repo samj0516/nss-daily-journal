@@ -16,25 +16,26 @@
             <h2>My Journey Into Web Development</h2>
         </header>
         <main class="journalBody">
-            <h2>Daily Journal</h2>
+            
             <form action ="">
                 <fieldset>
-                    <label for="journalDate">Date</label>
-                    <input type="date" name="date" id="date">
-                </fieldset>
-                <fieldset>   
-                    <label for="conceptsCovered">Concepts Covered</label>
-                    <input type="text" name="conceptsCovered" id="conceptsCovered">
-                </fieldset> 
-                <fieldset>   
-                    <label for="mood">Mood</label>
-                    <input type="" name="mood" id="mood">
-                </fieldset> 
-                <fieldset>
-                    <label for="entry">Entry</label>
-                    <textarea name="entry" id="entry"></textarea>
-                </fieldset>
-                <fieldset>
+                    <legend>Daily Journal</legend>
+                    <label for="journalDate">Date</label><br />
+                    <input type="date" name="date" id="date"><br />
+                 
+                    <label for="conceptsCovered">Concepts Covered</label><br />
+                    <input type="text" name="conceptsCovered" id="conceptsCovered"><br />
+                 
+                    <label for="mood">Mood</label><br />
+                    <select id="mood">
+                        <option value="confused">confused</option>
+                        <option value="excited">excited</option>
+                        <option value="overwhelmed">overwhelmed</option>
+                    </select><br />
+               
+                    <label for="entry">Entry</label><br />
+                    <textarea name="entry" id="entry"></textarea><br />
+              
                     <input type="button" value="Record Journal Entry" onclick="record()">
                 </fieldset>
             </form>
