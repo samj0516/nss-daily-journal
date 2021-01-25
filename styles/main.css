@@ -12,6 +12,17 @@ textarea {
 	font-size: 14px;
 	line-height: 1.5;
 }
+body, html {
+	height: 100%;
+	margin: 0;
+}
+.bg {
+	background-image: url("https://i.pinimg.com/originals/da/c3/24/dac324d952e1815d9f7a74aefa6d428c.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
@@ -24,4 +35,32 @@ form {
 }
 fieldset {
 	/* flex-direction: column; */
+}
+header {
+	display: flex;
+	align-items: flex-end;
+}
+header h1 {
+	padding-left: 20px;
+	align-self: flex-end;
+	font-size: 36px;
+}
+header h2 {
+	align-self: flex-end;
+	padding-left: 50px;
+	padding-bottom: 15px;
+}
+header img {
+	width: 20%;
+	height: auto;
+	mix-blend-mode: multiply;
+	/* object-fit: contain; */
+}
+.journalBody {
+	padding: 15px;
+	margin: 15px;
+
+}
+.journalEntries {
+	padding: 5px;
 }
