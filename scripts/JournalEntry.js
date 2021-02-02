@@ -4,13 +4,13 @@
  */
 export const JournalEntryComponent = (entry) => {
     return `
-        <article id="entry--${entry.id}" class="journalEntry">
-            <div class="entry__date">${entry.date}</div>
-            <div class="entry__mood">${entry.mood}</div>
-            <div class="entry__concept">${entry.concept}</div>
+        <fieldset id="entry--${entry.id}" class="journalEntry">
+            <legend class="entry__date">${entry.date}</legend>
+            <div class="entry__mood">Mood: ${entry.mood}</div>
+            <div class="entry__concept">Concepts discovered: ${entry.concept}</div>
             <div class="entry__entry">${entry.entry}</div>
             <button>Edit</button>
             <button>Delete</button>
-        </article>
+        </fieldset>
     `
 }
