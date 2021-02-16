@@ -8,7 +8,7 @@
 
 // This is the original data.
 const journal = []
-    
+const eventHub = document.querySelector('.bg')    
 
 /*
     You export a function that provides a version of the
@@ -31,4 +31,22 @@ export const useJournalEntries = () => {
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
     )
     return sortedByDate
+}
+
+export const saveJournalEntry = (entryObj) => {
+    // Use `fetch` with the POST method to add your entry to your API
+    return fetch("http://localhost:8088/entries", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entryObj)
+})
+        .then(getEntries)  // <-- Get all journal entries
+        .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
+}
+
+// Listen for record new entry button click
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
