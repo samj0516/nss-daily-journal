@@ -9,8 +9,8 @@ export const JournalEntryComponent = (entry) => {
             <div class="entry__mood">Mood: ${entry.mood}</div>
             <div class="entry__concept">Concepts discovered: ${entry.concept}</div>
             <div class="entry__entry">${entry.entry}</div>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button class="editEntry">Edit</button>
+            <button class="deleteEntry">Delete</button>
         </fieldset>
     `
 }

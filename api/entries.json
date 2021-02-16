@@ -1,28 +1,32 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "01/04/2021",
-            "mood": "Ok",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS."
-            
-        },
-        {
-            "id": 2,
-            "date": "01/08/2021",
-            "mood": "Ok",
-            "concept": "Git and Github workflow",
-            "entry": "We learned git commands in the terminal and the process of pushing a pulling to and from git hub."
-            
-        },
-        {
-            "id": 3,
-            "date": "01/15/2021",
-            "mood": "Ok",
-            "concept": "Automate with Javascript",
-            "entry": "We learned how to automate the fish in martin's aquarium using javascript."
-            
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "01/04/2021",
+      "mood": "Ok",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS."
+    },
+    {
+      "id": 2,
+      "date": "01/08/2021",
+      "mood": "Ok",
+      "concept": "Git and Github workflow",
+      "entry": "We learned git commands in the terminal and the process of pushing a pulling to and from git hub."
+    },
+    {
+      "id": 3,
+      "date": "01/15/2021",
+      "mood": "Ok",
+      "concept": "Automate with Javascript",
+      "entry": "We learned how to automate the fish in martin's aquarium using javascript."
+    },
+    {
+      "date": "2021-02-16",
+      "concept": "Many to Many Relationships",
+      "mood": "excited",
+      "entry": "Today we talked about many to many relationships and how depending on ",
+      "id": 4
+    }
+  ]
 }

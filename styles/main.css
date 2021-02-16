@@ -15,13 +15,15 @@ textarea {
 body, html {
 	height: 100%;
 	margin: 0;
-}
-.bg {
 	background-image: url("https://i.pinimg.com/originals/da/c3/24/dac324d952e1815d9f7a74aefa6d428c.jpg");
-	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.bg {
+	
+	height: 100%;
+
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -63,21 +65,21 @@ header img {
 	/* padding: 15px; */
 	/* margin: 15px; */
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	border: 1px dotted tomato;
 
 }
 .journalEntries {
 	/* padding: 5px; */
 	margin: 5px;
-	width: 68%;
+	width: 40%;
 	border: 1px dotted tomato;
 }
 .journalEntry{
 	/* padding: 5px; */
 	margin: 5px;
 	background-color: rgba(230, 97, 97, 0.15);
-	width: 90%;
+	/* width: 90%; */
 }
 footer {
 	text-align: center;
