@@ -25,7 +25,7 @@ const render = () =>{
                     <label for="entry">Entry</label><br />
                     <textarea name="entry" id="entry"></textarea><br />
               
-                    <input type="button" id="saveEntry" value="Record Journal Entry" onclick="record()">
+                    <input type="button" id="saveEntry" value="+ Record Journal Entry" onclick="record()">
                 </fieldset>`
 
 }
