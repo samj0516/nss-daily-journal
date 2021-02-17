@@ -1,32 +1,65 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "01/04/2021",
-      "mood": "Ok",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS."
-    },
-    {
       "id": 2,
       "date": "01/08/2021",
-      "mood": "Ok",
+      "moodId": 1,
       "concept": "Git and Github workflow",
       "entry": "We learned git commands in the terminal and the process of pushing a pulling to and from git hub."
     },
     {
       "id": 3,
       "date": "01/15/2021",
-      "mood": "Ok",
+      "moodId": 1,
       "concept": "Automate with Javascript",
       "entry": "We learned how to automate the fish in martin's aquarium using javascript."
     },
     {
       "date": "2021-02-16",
       "concept": "Many to Many Relationships",
-      "mood": "excited",
+      "moodId": 4,
       "entry": "Today we talked about many to many relationships and how depending on ",
       "id": 4
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "Using map array method",
+      "moodId": 3,
+      "entry": "Today I got stuck trying to get the moods on this journal form dropdown to render from the MoodProvider component. It was a bitch, but with a little guidance from several classmates.. (shoutout Dan Ross esp. he the goat) I got it to work.",
+      "id": 5
+    },
+    {
+      "date": "2021-02-18",
+      "concept": "refactoring",
+      "moodId": 5,
+      "entry": "I had to refactor a bunch of shit on my Daily Journal and it was hard but I think I figured it out.",
+      "id": 6
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Ok"
+    },
+    {
+      "id": 2,
+      "label": "Confident"
+    },
+    {
+      "id": 3,
+      "label": "Confused"
+    },
+    {
+      "id": 4,
+      "label": "Excited"
+    },
+    {
+      "id": 5,
+      "label": "Overwhelmed"
+    },
+    {
+      "id": 6,
+      "label": "Enlightened"
     }
   ]
 }

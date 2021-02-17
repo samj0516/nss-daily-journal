@@ -68,13 +68,14 @@ header img {
 	/* margin: 15px; */
 	display: flex;
 	flex: 1 0 auto;
+	justify-content: center;
 	/* flex-wrap: wrap; */
 	/* border: 1px dotted tomato; */
 
 }
 .journalEntriesList {
 	/* padding: 5px; */
-	padding: 5px 0px 10px 30px;
+	padding: 5px 0px 10px 0px;
 	width: 40%;
 	/* border: 1px dotted tomato; */
 }
@@ -96,6 +97,7 @@ footer {
 }
 .footerItem{
 	align-self: end;
+	padding: 5px;
 }
 footer p{
 	margin:0;
