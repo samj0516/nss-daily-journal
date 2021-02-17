@@ -1,8 +1,17 @@
 import { saveJournalEntry } from './JournalDataProvider.js'
+import { getMoods, useMoods } from './MoodProvider.js'
 const contentTarget = document.querySelector('.journalForm')
 const eventHub = document.querySelector('.bg')
+const allMoods = useMoods()
 
-const render = () =>{
+
+
+const render = (moodCollection) =>{
+    const moodDropdown = moodCollection.map((mood) => {
+        // debugger
+        return `<option value="${ mood.id }">${ mood.label }</option>`
+    }
+).join("")
     contentTarget.innerHTML = `
                 <fieldset>
                     <legend>Daily Journal</legend>
@@ -14,24 +23,29 @@ const render = () =>{
                  
                     <label for="mood">Mood</label><br />
                     <select id="mood">
-                        <option value="ok">ok</option>
-                        <option value="confident">confident</option>
-                        <option value="confused">confused</option>
-                        <option value="excited">excited</option>
-                        <option value="overwhelmed">overwhelmed</option>
-                        <option value="enlightened">enlightened</option>
+                    <option value="0">How are you feeling?</option>
+                        ${moodDropdown}
                     </select><br />
                
                     <label for="entry">Entry</label><br />
                     <textarea name="entry" id="entry"></textarea><br />
               
-                    <input type="button" id="saveEntry" value="+ Record Journal Entry" onclick="record()">
+                    <input type="button" id="saveEntry" value="+ Record Journal Entry" >
                 </fieldset>`
 
 }
 
+
+  
+
+
 export const JournalFormComponent = () => {
-    render()
+    getMoods()
+    .then(() => {
+        const allMoods = useMoods()
+        render(allMoods)
+    })
+    
 }
 
 eventHub.addEventListener("click", clickEvent => {
@@ -44,7 +58,7 @@ eventHub.addEventListener("click", clickEvent => {
         const newEntry = {
             date: dateId,
             concept: conceptsId,
-            mood: moodId,
+            moodId: parseInt(moodId),
             entry: entryId
         }
 

@@ -7,7 +7,7 @@
  */
 
 // This is the original data.
-const journal = []
+
 const eventHub = document.querySelector('.bg')    
 
 /*
@@ -17,7 +17,7 @@ const eventHub = document.querySelector('.bg')
 
 let entries = []
 export const getEntries = () => {
-    return fetch("http://localhost:8088/entries") // Fetch from the API
+    return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             entries = parsedEntries
@@ -28,14 +28,14 @@ export const useJournalEntries = () => {
     
     const sortedByDate = entries.slice().sort(
         (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+            Date.parse(nextEntry.date) - Date.parse(currentEntry.date)
     )
     return sortedByDate
 }
 
 export const saveJournalEntry = (entryObj) => {
     // Use `fetch` with the POST method to add your entry to your API
-    return fetch("http://localhost:8088/entries", {
+    return fetch("http://localhost:8088/entries?_expand=mood", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
@@ -47,6 +47,14 @@ export const saveJournalEntry = (entryObj) => {
 }
 
 // Listen for record new entry button click
-const dispatchStateChangeEvent = () => {
+export const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+export const deleteEntry = (entryId) => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+        method: "DELETE"
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
 }
