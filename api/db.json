@@ -34,6 +34,13 @@
       "moodId": 5,
       "entry": "I had to refactor a bunch of shit on my Daily Journal and it was hard but I think I figured it out.",
       "id": 6
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "Trying to reset form",
+      "moodId": 3,
+      "entry": "I'm trying to get this form to reset to blank after I hit record journal entry",
+      "id": 7
     }
   ],
   "moods": [

@@ -64,5 +64,7 @@ eventHub.addEventListener("click", clickEvent => {
 
         // Change API state and application state
         saveJournalEntry(newEntry)
+      
+        
     }
 })
